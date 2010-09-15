@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Checkbox groups</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.checkboxgroup.js"></script>
+	</head>
+	<body>
+		<label><input type="checkbox" id="master" /> <span>Master checker</span></label>
+		<fieldset>
+			<label><input type="checkbox" name="test[]" value="1" /> first</label>
+			<label><input type="checkbox" name="test[]" value="2" /> second</label>
+			<label><input type="checkbox" name="test[]" value="3" /> third</label>
+			<label><input type="checkbox" name="test[]" value="4" /> fourth</label>
+		</fieldset>
+		<script type="text/javascript">//<![CDATA[
+		$(document).ready(function() {
+			$('fieldset input[type=checkbox]').checkboxGroup({
+				master: $('#master'),
+				onAllSelected: function(master) { master.next('span').html('uncheck all'); },
+				onSomeSelected: function(master) { master.next('span').html('uncheck/check all'); },
+				onNoneSelected: function(master) { master.next('span').html('check all'); }
+			});
+		});
+		//]]></script>
+	</body>
+</html>
