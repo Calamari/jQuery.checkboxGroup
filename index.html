@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Checkbox groups</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="lib/jquery.checkboxgroup.js"></script>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 			<label><input type="checkbox" name="test[]" value="4"> fourth</label>
 		</fieldset>
 		<script>
-		$(document).ready(function() {
+		$(function() {
 			$('fieldset input[type=checkbox]').checkboxGroup({
 				master: $('#master'),
 				onAllSelected: function(master) { master.next('span').html('uncheck all'); },
