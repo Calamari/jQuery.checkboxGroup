@@ -29,6 +29,10 @@ onNoneSelected(masterCheckbox, slaveCheckboxes)
 
 	Callback, that is called, when none of the checkboxes is selected
 
+init: true/false
+
+	You can decide whether you want to call callback function during initialization or not. Default value is true.
+
 ## License 
 
 (The MIT License)
